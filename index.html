@@ -12,62 +12,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
+            * {
+                box-sizing: border-box;
+                -webkit-tap-highlight-color: transparent;
+            }
 
-        :root {
-            --rosa-clarinho: #FFF0F3;
-            --rosa-medio: #F2C4CE;
-            --rosa-velho: #B46A78;
-            --texto-escuro: #4A3A3E;
-            --fundo: #FAFAFA;
-        }
+            :root {
+                --rosa-clarinho: #FFF0F3;
+                --rosa-medio: #F2C4CE;
+                --rosa-velho: #B46A78;
+                --texto-escuro: #4A3A3E;
+                --fundo: #FAFAFA;
+            }
 
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            background-color: var(--fundo);
-            font-family: 'Quicksand', sans-serif;
-            color: var(--texto-escuro);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100vw;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background-color: var(--fundo);
+                font-family: 'Quicksand', sans-serif;
+                color: var(--texto-escuro);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-        .card {
-            background-color: #FFFFFF;
-            background-image: url('fundo-ursinho.png');
-            background-size: 100% auto;
-            background-position: center top;
-            background-repeat: no-repeat;
-            width: 100%;
-            max-width: 420px;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            position: relative;
-        }
+            .card {
+                background-color: #FFFFFF;
+                background-image: url('fundo-ursinho.png');
+                background-size: 100% auto;
+                background-position: center top;
+                background-repeat: no-repeat;
+                width: 100%;
+                max-width: 420px;
+                min-height: 100dvh;
+                height: 100dvh;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: relative;
+            }
 
-        .conteudo {
-            background-color: #FFFFFF;
-            height: 60vh;
-            width: 100%;
-            border-radius: 40px 40px 0 0;
-            padding: 3vh 20px 4vh 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            box-shadow: 0 -10px 30px rgba(255,255,255,1), 0 -5px 15px rgba(0,0,0,0.04);
-            z-index: 10;
-        }
+            .conteudo {
+                background-color: #FFFFFF;
+                height: 60vh;
+                width: 100%;
+                border-radius: 40px 40px 0 0;
+                padding: 3vh 20px calc(4vh + env(safe-area-inset-bottom)) 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                box-shadow: 0 -10px 30px rgba(255,255,255,1), 0 -5px 15px rgba(0,0,0,0.04);
+                z-index: 10;
+            }
 
         @media (prefers-color-scheme: dark) {
             .conteudo, .card { background-color: #FFFFFF !important; }
